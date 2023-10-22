@@ -10,7 +10,7 @@
     "build:server": "NODE_ENV=production node server.js",
     "debug": "ndb server.js",
     "watch:js": "parcel watch ./public/js/index.js --out-dir ./public/js --out-file bundle.js",
-    "build": ""
+    "build": "npm i"
   },
   "author": "swopnil maharjan",
   "license": "ISC",
