@@ -7,6 +7,7 @@ const mongoSanitize = require('express-mongo-sanitize')
 const xss = require('xss-clean')
 const hpp = require('hpp')
 const cookieParser = require('cookie-parser')
+const compress = require('compression')
 const morgan = require('morgan')
 const tourRouter = require('./routes/tourRoutes');
 const userRouter = require('./routes/userRoutes')
@@ -14,7 +15,8 @@ const globalErrorHandler = require('./controllers/errorController')
 const reviewRouter = require('./routes/reviewRoute')
 const bookingRouter = require('./routes/bookingRoutes')
 const viewRouter = require('./routes/viewRoutes')
-const AppError = require('./utils/AppError')
+const AppError = require('./utils/AppError');
+const compression = require('compression');
 
 app.set('view engine', 'pug');
 app.set('views',path.join(__dirname,'views'))
@@ -59,6 +61,8 @@ app.use(xss());
 app.use(hpp({
     whitelist:['duration','ratingsQuantity','ratingsAverage','maxGroupSize','difficulty','price']
 }))
+
+app.use(compression())
 
 //test middlewawre
 app.use((req,res,next)=>{

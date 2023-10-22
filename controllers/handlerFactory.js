@@ -51,7 +51,7 @@ exports.getOne = (Model,popOptions)=>exports.getTour = catchAsync(async (req,res
     if(!doc){
         return next(new AppError('no document found with that id',404))
     } 
-    console.log('this one is also being called')
+    // console.log('this one is also being called')
     res.status(200).json({
         status:'sucess',
         data:{

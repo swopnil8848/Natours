@@ -8,7 +8,7 @@ export const updatePassword = async (data)=>{
 
         const res = await axios.patch(url,data);
 
-        console.log('user password changed sucessfully!!')
+        // console.log('user password changed sucessfully!!')
         
         if(res.data.status ==='sucess'){
             showAlert('sucess','Updated sucessfully')
@@ -23,7 +23,7 @@ export const updateUserData = async (data)=>{
 
         const res = await axios.patch(url,data);
 
-        console.log('user password changed sucessfully!!')
+        // console.log('user password changed sucessfully!!')
 
         if(res.data.status ==='sucess'){
             showAlert('sucess','Updated sucessfully')

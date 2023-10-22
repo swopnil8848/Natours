@@ -58,7 +58,7 @@ const sendErrorProd = (err,req, res) => {
     }
 
     // Log error
-    console.error('ERROR 💥', err);
+    // console.error('ERROR 💥', err);
 
     // B) Render Website
     return res.status(err.statusCode).render('error',{
@@ -78,7 +78,7 @@ const sendErrorProd = (err,req, res) => {
   }
   else {
     // 1) Log error
-    console.error('ERROR 💥', err);
+    // console.error('ERROR 💥', err);
 
     // 2) Send generic message
     return res.status(err.statusCode).render('error',{
